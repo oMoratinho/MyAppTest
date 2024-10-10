@@ -2,88 +2,128 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D9F4FF"
+    android:background="#333333"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:text="Logo"
-        android:textSize="24sp"
+    <!-- Logo e título do app -->
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/app_logo"
+        android:src="@drawable/ic_launcher_foreground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AMAZEN"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImageView" />
+
+    <TextView
+        android:id="@+id/subtitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TUDO EM UM SÓ LUGAR"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botões do menu com imagens -->
+
+    <Button
+        android:id="@+id/btnAbastecer"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="16dp"
+        android:drawableLeft="@drawable/ic_launcher_foreground"
+        android:drawablePadding="10dp"
+        android:padding="10dp"
+        android:text="ABASTECER"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitleTextView" />
+
+    <Button
+        android:id="@+id/btnRetirar"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:text="RETIRAR"
+        android:drawableLeft="@drawable/ic_launcher_foreground"
+        android:padding="10dp"
+        android:drawablePadding="10dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/btnAbastecer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <Button
+        android:id="@+id/btnTransferir"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:text="TRANSFERIR"
+        android:drawableLeft="@drawable/ic_launcher_foreground"
+        android:padding="10dp"
+        android:drawablePadding="10dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/btnRetirar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <Button
+        android:id="@+id/btnInventario"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:text="INVENTÁRIO"
+        android:drawableLeft="@drawable/ic_launcher_foreground"
+        android:padding="10dp"
+        android:drawablePadding="10dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/btnTransferir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <TextView
+        android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="AMAZEN"
-        android:textSize="38sp"
+        android:text="Menu WMS"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Tudo em um lugar só"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="352dp"
-        android:text="Sobre a Empresa"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.559"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="WMS"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="Controle seu estoque aqui"
-        app:layout_constraintEnd_toStartOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.717"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="35dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="72dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.744"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:srcCompat="@drawable/pngwing_com" />
+        app:layout_constraintTop_toBottomOf="@+id/subtitleTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
